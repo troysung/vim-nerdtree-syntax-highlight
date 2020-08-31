@@ -227,6 +227,14 @@ let s:white = "FFFFFF"
 let s:vuejs = '42B883'
 
 let s:file_extension_colors = {
+  \ 'doc'      : s:green,
+  \ 'docx'     : s:green,
+  \ 'xls'      : s:orange,
+  \ 'xlsx'     : s:orange,
+  \ 'ppt'      : s:blue,
+  \ 'pptx'     : s:blue,
+  \ 'txt'      : s:aqua,
+  \ 'tex'      : s:aqua,
   \ 'styl'     : s:green,
   \ 'sass'     : s:pink,
   \ 'scss'     : s:pink,
@@ -385,6 +393,7 @@ let s:file_node_pattern_matches = {
 \}
 
 let s:enabled_extensions = [
+  \ 'doc',
   \ 'bmp',
   \ 'c',
   \ 'coffee',
@@ -442,12 +451,12 @@ if !exists('g:NERDTreeExtensionHighlightColor')
 endif
 
 for [key, val] in items(s:file_extension_colors)
-  if (!(exists('g:NERDTreeLimitedSyntax') ||
-        \ exists('g:NERDTreeSyntaxDisableDefaultExtensions')) ||
-        \ index(g:NERDTreeSyntaxEnabledExtensions, key) >= 0) &&
-        \ !has_key(g:NERDTreeExtensionHighlightColor, key)
+ " if (!(exists('g:NERDTreeLimitedSyntax') ||
+ "       \ exists('g:NERDTreeSyntaxDisableDefaultExtensions')) ||
+ "       \ index(g:NERDTreeSyntaxEnabledExtensions, key) >= 0) &&
+        " \ !has_key(g:NERDTreeExtensionHighlightColor, key)
     let g:NERDTreeExtensionHighlightColor[key] = val
-  endif
+  " endif
 endfor
 
 for [key, val] in items(g:NERDTreeExtensionHighlightColor)

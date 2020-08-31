@@ -1,4 +1,12 @@
 extensions=(
+  \ 'doc'
+  \ 'docx'
+  \ 'xls'
+  \ 'xlsx'
+  \ 'ppt'
+  \ 'pptx'
+  \ 'txt'
+  \ 'tex'
   \ 'styl'
   \ 'sass'
   \ 'scss'
